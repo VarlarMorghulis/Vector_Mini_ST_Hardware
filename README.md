@@ -42,8 +42,9 @@ Last update:2026.5
 ### 2.整体布局
 
 <center class="half">
-    <img src="E:\Vector_Mini\Introduction\figure\Peripheral - 副本.png" width="700"/>
+    <img src="./images/Peripheral.png" width="700"/>
 </center>
+
 
 <div align="center">图2-1 驱动器布局示意图
 
@@ -54,7 +55,7 @@ Last update:2026.5
 
 |   名称   |   解释   |    范围     | CAN参数ID | USB参数ID | 默认值 |
 | :------: | :------: | :---------: | :----: | :------: | :------: |
-| mode | 运行模式 | [0,8] (int) |  0x00  |  mod  |    |
+| mode | 运行模式 | [0,10] (int) |  0x00  |  mod  |    |
 |  i_set   | 设定电流 |   [-i_lim,i_lim]   |  0x02  |  i_s  |    |
 | spd_set  | 设定速度 |  [-spd_lim,spd_lim]  |  0x04  |  s_s  |    |
 | pos_set  | 设定位置 |     [-$\infty$,+$\infty$]     | 0x06 | p_s |  |
@@ -161,13 +162,13 @@ Last update:2026.5
 * pos_dec：电机减速度。用于位置控制模式。
 * pos_maxspd：位置环最大速度。
 
-<img src="E:\Robocon\Project\Blazer-FOC\4_Resource\User Manual\trapzoid.png" alt="Blazer-FOC" width="1000;" />
+<img src="./images/trapzoid.png" width="800;" />
 
 <div align="center">图3-1 梯形速度轨迹的速度及位置曲线
 
 ​		速度曲线的斜率代表加速度和减速度，平台期的速度为位置环轨迹规划的最大速度。特别地，当运动路程较短时，电机来不及加速到最大速度，速度曲线将由梯形变为三角形，如图3-2所示，因此用户在使用前需预估一下行程与速度的相对关系。
 
-<img src="E:\Robocon\Project\Blazer-FOC\4_Resource\User Manual\triangle.png" alt="Blazer-FOC" width="1000;" />
+<img src="./images/triangle.png" width="800;" />
 
 <div align="center">图3-2 梯形速度轨迹（特殊情况）的速度及位置曲线
 
@@ -276,7 +277,7 @@ Last update:2026.5
 
 ​		例如：打印当前电机的直轴电流和交轴电流，可依次在VOFA+发送区输入“**\p_i_d=0\r\n**”  “**\p_i_q=1\r\n**”。效果如图3-3所示。
 
-<img src="E:\Vector_Mini\Introduction\figure\VOFA5.png" width="600;" />
+<img src="./images/USB_VOFA.png" width="600;" />
 
 <div align="center">图3-3 VOFA+波形查看		
 
